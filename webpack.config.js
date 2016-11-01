@@ -8,14 +8,9 @@ module.exports = {
   },
   plugins: [
     new HtmlwebpackPlugin({
-      title: 'Hello World app',
-      template: './tmp-index.html',
-
+      template: './tmp-index.html'
     })
   ],
-  eslint: {
-  configFile: './.eslintrc'
-},
   module: {
     loaders: [{
       test: /\.css$/,
@@ -25,12 +20,8 @@ module.exports = {
       exclude: /(node_modules|bower_components)/,
       loader: 'babel',
       query: {
-        presets: ['react', 'es2015']
+        presets: ['es2015','react',"stage-0"]
       }
-    }, {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'eslint-loader'
     }]
   }
 }
