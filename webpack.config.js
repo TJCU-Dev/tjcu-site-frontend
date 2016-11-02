@@ -4,13 +4,12 @@ module.exports = {
   entry: ["./src/"],
   output: {
     path: __dirname,
-    filename: "./build/bundle.js",
-      publicPath: "/build/",
+    filename: "./build/bundle.js"
   },
   plugins: [
     new HtmlwebpackPlugin({
       template: './tmp-index.html',
-      filename: './build/index.html'
+      filename: './index.html'
     })
   ],
   module: {
@@ -27,11 +26,11 @@ module.exports = {
     }]
   },
   devServer: {
-    contentBase: __dirname+"/build/", //本地服务器所加载的页面所在的目录
+    contentBase: __dirname, //本地服务器所加载的页面所在的目录
     colors: true, //终端中输出结果为彩色
     historyApiFallback: true, //不跳转
     inline: true, //实时刷新
-    port: 21212,
+    port: 3000,
     host:'127.0.0.1'
   }
 }

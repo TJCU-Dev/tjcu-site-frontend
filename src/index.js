@@ -13,6 +13,7 @@ const App = React.createClass({
     return (
       <div>
         <h1>App</h1>
+        <Link to={'/about'}>lllll</Link>
       </div>
     )
   }
@@ -22,9 +23,9 @@ const App = React.createClass({
 const About = React.createClass({
   render() {
     return (
-        <MuiThemeProvider >
-        <Test />
-        </MuiThemeProvider>
+      <div>
+        <h1>About</h1>
+      </div>
     )
   }
 })
@@ -41,10 +42,8 @@ const NoMatch = React.createClass({
 
 render((
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <Route path="a" component={About}/>
-      <Route path="*" component={NoMatch}/>
-    </Route>
+  <Route path="/App" component={App}/>
+  <Route path="/" component={NoMatch}/>
   </Router>
 ), document.getElementById('top'))
 
