@@ -2,7 +2,7 @@
   "name": "tjcu-site-frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "chrome ./index.html",
+  "main": "src/index.js",
   "dependencies": {
     "babel-core": "^6.18.0",
     "babel-loader": "^6.2.7",
