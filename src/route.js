@@ -74,7 +74,7 @@ render((
       </Route>
     </Route>
   </Router>
-), document.getElementById('top'))
+), document.body)
 
 
 // render(
