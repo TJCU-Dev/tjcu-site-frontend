@@ -8,6 +8,7 @@ import styles, {getMuiTheme, MuiThemeProvider, colors} from 'material-ui/styles'
 
 import Tools from './tools.js'
 import Login from './login.js'
+import Join  from './join.js'
 
 const App = ({ children }) => (
 <MuiThemeProvider uiTheme={getMuiTheme(lightBaseTheme)} >
@@ -21,7 +22,9 @@ const App = ({ children }) => (
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-        <IndexRoute component={Login}/>
+        <IndexRoute component={Join}/>
+        <Route path="join" component={Join}/>
+        <Route path="login" component={Login}/>
     </Route>
   </Router>
 ), document.getElementById('app'))
