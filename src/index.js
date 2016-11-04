@@ -10,7 +10,7 @@ import './index.css'
 import Tools from './tools.js'
 import Login from './login.js'
 import Join  from './join.js'
-import User  from './user/user.js'
+import Account  from './Account/Account.js'
 const App = ({ children }) => (
 <MuiThemeProvider uiTheme={getMuiTheme(lightBaseTheme)} >
   <div>
@@ -23,10 +23,10 @@ const App = ({ children }) => (
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-        <IndexRoute component={User}/>
+        <IndexRoute component={Account}/>
         <Route path="join" component={Join}/>
         <Route path="login" component={Login}/>
-        <Route path="User" component={User}/>
+        <Route path="User" component={Account}/>
 
     </Route>
   </Router>

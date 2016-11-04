@@ -33,7 +33,7 @@ class Information extends React.Component {
          </div>
 
          <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}} >
-           <TextField style={{ width:'80%' }} floatingLabelText="用户名" disabled={!this.state.show} />
+           <TextField style={{ width:'80%' }} floatingLabelText="用户名"  disabled={!this.state.show} />
            <TextField style={{ width:'80%' }} floatingLabelText="邮箱" disabled={!this.state.show}  />
            <TextField style={{ width:'80%' }} floatingLabelText="性别" disabled={!this.state.show}  />
            <TextField style={{ width:'80%' }} floatingLabelText="学号" disabled={!this.state.show}  />

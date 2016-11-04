@@ -5,10 +5,10 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
 
-import './user.css';
+import './Account.css';
 import UserNav from './nav.js'
 
-const User = () => (
+const Account = () => (
   <div>
   <Paper style={{ marginLeft:'10%',width:'80%',height:"auto", background: grey50, padding:20,}}>
     <div style={{ display: 'flex', marginBottom: 10}} >
@@ -25,4 +25,4 @@ const User = () => (
   </div>
 );
 
-export default User;
+export default Account;
