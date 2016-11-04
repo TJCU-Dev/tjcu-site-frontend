@@ -4,5 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-constructor	/Users/NoBey/tjcu-site-frontend/src/course/curriculum.js	/^  constructor(props) {$/;"	function	line:8
-render	/Users/NoBey/tjcu-site-frontend/src/course/curriculum.js	/^  render() {$/;"	function	line:16

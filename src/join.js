@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {grey200, grey50, green700} from 'material-ui/styles/colors';
+import {grey200, grey50, green700,grey800} from 'material-ui/styles/colors';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
@@ -12,7 +12,7 @@ const Login = () => (
   <TextField  hintText="学号"   floatingLabelText="学号"   style={{width: '100%'}} /><br />
   <TextField  hintText="手机号"   floatingLabelText="手机号"   style={{width: '100%'}} /><br />
   <TextField  hintText="密码"     floatingLabelText="密码"  type="password"  style={{width: '100%'}} />
-  <RaisedButton label="注册" primary={true} fullWidth={true} style={{marginTop:'4%', height:50}} />
+  <RaisedButton label="注册" primary={true} fullWidth={true} style={{marginTop:'4%', height:50}} buttonStyle={{background: grey800}}  />
   </Paper>
 );
 
