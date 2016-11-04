@@ -7,13 +7,16 @@ import lightBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import styles, {getMuiTheme, MuiThemeProvider, colors} from 'material-ui/styles';
 import './index.css'
 
-import Tools from './tools.js'
-import Login from './login.js'
-import Join  from './join.js'
-import Account  from './Account/Account.js'
+import Tools   from './tools.js'
+import Login   from './login.js'
+import Join    from './join.js'
+import Account from './Account/Account.js'
+import Course  from './course/course.js'
+
 const App = ({ children }) => (
 <MuiThemeProvider uiTheme={getMuiTheme(lightBaseTheme)} >
   <div>
+  
       {children}
   </div>
 </MuiThemeProvider>
@@ -23,10 +26,11 @@ const App = ({ children }) => (
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-        <IndexRoute component={Account}/>
+        <IndexRoute to="Course" component={Course}/>
         <Route path="join" component={Join}/>
         <Route path="login" component={Login}/>
-        <Route path="User" component={Account}/>
+        <Route path="Account" component={Account}/>
+        <Route path="Course" component={Account}/>
 
     </Route>
   </Router>

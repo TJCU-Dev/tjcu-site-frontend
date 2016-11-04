@@ -12,7 +12,7 @@ function handleActive(tab) {
 }
 
 const UserNav = () => (
-  <Tabs tabItemContainerStyle={{background:grey800 }} inkBarStyle={{background:red900}} initialSelectedIndex={1}>
+  <Tabs tabItemContainerStyle={{background:grey800 }} inkBarStyle={{background:red900}} initialSelectedIndex={0}>
     <Tab label="信息资料" >
        <Information />
     </Tab>
