@@ -1,6 +1,0 @@
-constructor	/Users/NoBey/tjcu-site-frontend/src/course/FinishCourse.js	/^  constructor(props) {$/;"	function	line:8
-render	/Users/NoBey/tjcu-site-frontend/src/course/FinishCourse.js	/^  render() {$/;"	function	line:21
-constructor	/Users/NoBey/tjcu-site-frontend/src/course/curriculum.js	/^  constructor(props) {$/;"	function	line:8
-render	/Users/NoBey/tjcu-site-frontend/src/course/curriculum.js	/^  render() {$/;"	function	line:16
-constructor	/Users/NoBey/tjcu-site-frontend/src/navbar.js	/^  constructor(props) {$/;"	function	line:9
-render	/Users/NoBey/tjcu-site-frontend/src/navbar.js	/^  render() {$/;"	function	line:15
