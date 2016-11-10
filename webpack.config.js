@@ -3,14 +3,22 @@ var HtmlwebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: ["./src/"],
   output: {
-    path: __dirname+"/build/",
+    path: __dirname + "/build/",
     filename: "bundle.js"
+  },
+  resolve: {
+    alias: {
+      jquery: "jquery/src/jquery"
+    }
   },
   plugins: [
     new HtmlwebpackPlugin({
       template: './tmp-index.html',
       filename: './index.html'
-    })
+    }),
+    new Webpack.ProvidePlugin({
+      $: 'jquery'
+    }),
   ],
   module: {
     loaders: [{
@@ -30,7 +38,13 @@ module.exports = {
     colors: true, //终端中输出结果为彩色
     historyApiFallback: true, //不跳转
     inline: true, //实时刷新
-    port: 3000,
-    host:'127.0.0.1'
+    port: 3001,
+    host: '127.0.0.1',
+    proxy: {
+    '/api/*': {
+        target: 'http://127.0.0.1:3000',
+        secure: false,
+    }
+  }
   }
 }
