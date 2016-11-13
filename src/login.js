@@ -29,9 +29,13 @@ class Login extends React.Component {
 
     this.login = () => {
       const data = this.state.data
-      
+
       $.post('/api/login', data, (data, Status, xhr)=>{
         if(data._id){
+           localStorage.name = data.user
+           localStorage.portrait = data.portrait
+           localStorage.email = data.email
+           localStorage.xh = data.xh
            browserHistory.push('/Account')
         }else{
         }

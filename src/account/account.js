@@ -8,21 +8,34 @@ import Avatar from 'material-ui/Avatar';
 import './Account.css';
 import UserNav from './nav.js'
 
-const Account = () => (
+class Account extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      portrait: (localStorage.portrait=='') ? '/img/portrait/default.jpg' : localStorage.portrait,
+      name: localStorage.name
+    };
+
+  }
+
+  render() {
+    return (
   <div>
   <Paper style={{ marginLeft:'10%',width:'80%',height:"auto", background: grey50, padding:20,}}>
     <div style={{ display: 'flex', marginBottom: 10}} >
-      <Avatar src="" size={100}  style={{}} />
+      <Avatar src={this.state.portrait} size={100}  style={{}} />
       <div style={{marginLeft:20}}>
-        <h1 className='UserName' style={{color: grey900, fontWeight:400}}>Name1</h1>
+        <h1 className='UserName' style={{color: grey900, fontWeight:400}}>{this.state.name}</h1>
         <h4 className='UserIntroduce' style={{color: grey600, fontWeight:100 }}>简介</h4>
       </div>
     </div>
     <UserNav style={{marginTop:100}} />
   </Paper>
 
-
   </div>
-);
+)
+}
+
+}
 
 export default Account;
