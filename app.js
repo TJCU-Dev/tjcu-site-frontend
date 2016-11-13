@@ -5,7 +5,11 @@ var app = express();
 var root = 'build'
 var proxyhost = 'http://127.0.0.1:41893'
 app.use('/img', proxy(proxyhost+'/portrait/'))
-app.use('/api', proxy(proxyhost))
+app.use('/api', proxy(proxyhost+'', {
+  forwardPath: function(req, res) {
+    return require('url').parse('/api'+req.url).path;
+  }
+}))
 app.use(express.static(root))
 app.use(fallback('index.html', { root }))
 var server = app.listen(41892, function () {

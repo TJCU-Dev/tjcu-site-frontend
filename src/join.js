@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Route, Link, browserHistory, hashHistory, IndexLink, IndexRoute } from 'react-router'
-
+import Snackbar from 'material-ui/Snackbar';
 import {grey200, grey50, green700,grey800} from 'material-ui/styles/colors';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -13,7 +13,9 @@ class Join extends React.Component {
       data: {
         user: null,
         password: null
-      }
+      },
+      MsgOpen: false,
+      MsgText:'null'
     };
 
     this.UserChange = (event)=>{
@@ -43,6 +45,10 @@ class Join extends React.Component {
         if(data._id){
            browserHistory.push('/Account')
         }else{
+           that.setState({
+             MsgText: data.msg,
+             MsgOpen: true
+           })
         }
       })
 
@@ -59,6 +65,7 @@ class Join extends React.Component {
       <TextField    onChange={this.TelChange}       hintText="手机号"   floatingLabelText="手机号"   style={{width: '100%'}} /><br />
       <TextField    onChange={this.PasswordChange}  hintText="密码"     floatingLabelText="密码"    type="password"  style={{width: '100%'}} />
       <RaisedButton onClick={this.join} label="注册" primary={true}     fullWidth={true} style={{marginTop:'4%', height:50}} buttonStyle={{background: grey800}}  />
+           <Snackbar  open={this.state.MsgOpen} message={this.state.MsgText} />
       </Paper>
     )
   }

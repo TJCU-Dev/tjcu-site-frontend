@@ -31,6 +31,7 @@ class Secondary extends React.Component {
     if(state.newpw!==state.newpw2) return '两次密码不相同'
     return 'ok'
   }
+
   changePassword = ()=>{
     const that = this
     $.post('/api/user/change', this.state, (data, Status, xhr)=>{
